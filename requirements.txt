@@ -6,5 +6,4 @@ langchain
 chromadb
 PyPDF2
 tiktoken
-io
 fitz
