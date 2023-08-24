@@ -1,0 +1,10 @@
+PyMuPDF 
+pytesseract 
+Pillow 
+chainlit
+langchain
+chromadb
+PyPDF2
+tiktoken
+io
+fitz
