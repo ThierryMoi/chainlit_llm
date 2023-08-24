@@ -2,9 +2,9 @@ name: CI-CD-AIRFLOW
 
 on:
   push:
-    branches: [dev_m54_2023m]
+    branches: [main]
   pull_request:
-    branches: [dev_m54_2023]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -37,5 +37,5 @@ jobs:
           context: ./airflow/docker
           file: ./airflow/docker/dockerfile
           push: true
-          tags: europe-west4-docker.pkg.dev/intern-project-0003/airflow-gke/airflow-plugins-dependencies:1.0.3
+          tags: europe-west4-docker.pkg.dev/intern-project-0003/backend/chainlit_app:1.0.0
 
