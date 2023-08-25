@@ -15,7 +15,7 @@ async def init():
     files = None
     embeddings = OpenAIEmbeddings()
     await cl.Message(
-            content=f"Bienvenue {cl.user_session.get('user_infos')['name']}.\n Je m'appele JOE DAN et je suis votre assistant juridique !",
+            content=f"Bienvenue !.\n Je m'appele JOE DAN et je suis votre assistant juridique !",
         ).send()
     while files == None:
                 files = await cl.AskFileMessage(
@@ -40,7 +40,7 @@ async def init():
                 chunks = text_splitter.split_text(text_info["text"])
         for idx, chunk in enumerate(chunks):
                 texts.append(chunk)
-                metadatas.append({"source": f"{text_info['name']}_{idx}","author":cl.user_session.get('user_infos')['email']})
+                metadatas.append({"source": f"{text_info['name']}_{idx}"})
 
         docsearch = await cl.make_async(Chroma.from_texts)(
                 texts, embeddings, metadatas=metadatas,            )
