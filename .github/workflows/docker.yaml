@@ -37,5 +37,5 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: europe-west4-docker.pkg.dev/intern-project-0003/backend/chainlit_app:1.0.0
+          tags: europe-west4-docker.pkg.dev/intern-project-0003/m54/chainlit_app:1.0.0
 
