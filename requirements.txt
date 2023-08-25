@@ -1,9 +1,7 @@
-PyMuPDF 
-pytesseract 
 Pillow 
 chainlit
 langchain
 chromadb
 PyPDF2
 tiktoken
-fitz
+python-dotenv

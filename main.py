@@ -1,23 +1,11 @@
-from time import sleep
-from typing import List
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain.chat_models import ChatOpenAI
-from chainlit.input_widget import Select
-from service import extract_text_from_pdf
 import chainlit as cl
 import PyPDF2
 from io import BytesIO
 from config import *
-from chainlit.server import app
-from fastapi import  UploadFile,File
-from fastapi.responses import (
-    HTMLResponse,
-)
-from fastapi.responses import JSONResponse
-from pydantic import BaseModel
-
 
 @cl.on_chat_start
 async def init():
