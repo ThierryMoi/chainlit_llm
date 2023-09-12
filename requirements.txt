@@ -6,3 +6,4 @@ PyPDF2
 tiktoken
 python-dotenv
 openai
+numpy>=1.22.2 # not directly required, pinned by Snyk to avoid a vulnerability
